@@ -41,7 +41,7 @@ function get(query) {
                         // Check if the location was found before printing
                         if (weather.narrative) {
                             // Print the data
-                            printWeather(weather.narrative);
+                            printWeather(weather.narrative[0]);
                         } else {
                             const queryError = new Error(`The location "${readableQuery}" was not found.`);
                             printError(queryError);
